@@ -10,7 +10,7 @@ task('default', ['lint', 'test']);
 
 desc("Run tests");
 task("test", [], function() {
-	var mocha = new Mocha({ui: "bdd"});
+	var mocha = new Mocha({ui: "bdd", reporter: "list"});
 	mocha.addFile("test/lint_runner.js");
 
 	var failures = false;

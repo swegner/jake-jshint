@@ -4,7 +4,6 @@
 var expect = require("expect.js");
 var assert = require("assert");
 var fs = require("fs");
-var path = require("path");
 
 var lint = require("../lib/lint_runner.js");
 var testDir = "build/temp_files/";
@@ -74,8 +73,8 @@ describe("File validation", function() {
 	}
 
 	afterEach(function() {
-		if (path.existsSync(testFile)) fs.unlinkSync(testFile);
-		assert.ok(!path.existsSync(testFile), "Could not delete test file: " + testFile);
+		if (fs.existsSync(testFile)) fs.unlinkSync(testFile);
+		assert.ok(!fs.existsSync(testFile), "Could not delete test file: " + testFile);
 	});
 
 	it("should load file from file system (UTF-8 assumed)", function() {
@@ -95,7 +94,7 @@ describe("File validation", function() {
 
 	it("should report filename", function() {
 		inspectConsole(function(output) {
-			writeTestFile("");
+			writeTestFile("a =1;");
 			lint.validateFile(testFile);
 			expect(output).to.eql([testFile + " ok"]);
 		});
@@ -121,7 +120,7 @@ describe("File list validation", function() {
 	afterEach(function() {
 		testFiles.forEach(function(testFile) {
 			fs.unlinkSync(testFile);
-			assert.ok(!path.existsSync(testFile), "Could not delete test file: " + testFile);
+			assert.ok(!fs.existsSync(testFile), "Could not delete test file: " + testFile);
 		});
 	});
 
@@ -171,7 +170,7 @@ describe("File list validation", function() {
 describe("Error reporting", function() {
 	it("should say 'ok' on pass", function() {
 		inspectConsole(function(output) {
-			lint.validateSource("");
+			lint.validateSource("a = 1;");
 			expect(output).to.eql(["ok"]);
 		});
 	});
@@ -209,7 +208,7 @@ describe("Error reporting", function() {
 
 	it("should include optional description", function() {
 		inspectConsole(function(output) {
-			lint.validateSource("", {}, {}, "code A");
+			lint.validateSource("a = 1;", {}, {}, "code A");
 			expect(output[0]).to.eql("code A ok");
 		});
 		inspectConsole(function(output) {
