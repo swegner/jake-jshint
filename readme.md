@@ -25,9 +25,9 @@ Validates multiple files and outputs the results for each one. All files are val
 
 ### Installing with [NPM](http://npmjs.org/)
 
-Install globally with:
+Install with:
 
-    npm install -g jake-jshint
+    npm install jake-jshint
 
 Or you may also install it as a development dependency in a package.json file:
 
