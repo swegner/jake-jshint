@@ -1,6 +1,6 @@
 {
   "name": "jake-jshint",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "The runner in this repository provides a convenient front-end to JSHint, a linter for Javascript. It should also work for JSLint.",
   "main": "lib/lint_runner.js",
   "directories": {
