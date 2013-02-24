@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/NotMyself/jake-jshint.png)](https://travis-ci.org/NotMyself/jake-jshint)
-# lint-runner
+# Jake-JsHint
 
-Jake JsHint provides a convenient front-end to [JSHint](http://www.jshint.com), a linter for Javascript. It should also work for [JSLint](http://www.jslint.com/). 
+Jake-JsHint provides a convenient front-end to [JSHint](http://www.jshint.com), a linter for Javascript. It should also work for [JSLint](http://www.jslint.com/). 
 
 You're welcome to use the runner for your own projects. (See license below.) This project was just a quick hack, so I can't vouch for its robustness, but it should work in most cases. One flaw I'm aware of is that it assumes all files are UTF8-encoded, which may not be true for your system. It also has no exception handling.
 
