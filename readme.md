@@ -7,17 +7,17 @@ You're welcome to use the runner for your own projects. (See license below.) Thi
 
 The runner is a [Node.js](http://nodejs.org/) module. It exposes three functions:
 
-  validateSource(sourceCode, [options], [globals], [description])
+      validateSource(sourceCode, [options], [globals], [description])
    
 Run JSHint on raw source code and output the results to the console (using `console.log()`). If the code failed to validate, the details are also output to the console. If the code succeeded, a one-line `ok` message is displayed. If provided, `description` will be prepended to the pass/fail message, like this: `description ok`.
 
 This function returns `true` if the code was valid or `false` if errors were found. `options` and `globals` are passed through to JSHint.
 
-  validateFile(filename, [options], [globals])
+      validateFile(filename, [options], [globals])
    
 Same as `validateSource`, except that the source code is read from a file.
 
-  validateFileList(fileList, [options], [globals])
+      validateFileList(fileList, [options], [globals])
   
 Validates multiple files and outputs the results for each one. All files are validated even when some fail.
 
