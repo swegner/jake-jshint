@@ -23,7 +23,7 @@
     "url": "git://github.com/NotMyself/Autocommit.git"
   },
   "keywords": [
-    "lint"
+    "lint", "jake"
   ],
   "author": "James Shore",
   "license": "BSD",
