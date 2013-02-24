@@ -23,7 +23,7 @@ Validates multiple files and outputs the results for each one. All files are val
 
 `fileList` is expected to be an array. This function returns `true` if *all* files are valid and `false` otherwise.
 
-### Installing with [NPM](http://npmjs.org/)
+## Installing with [NPM](http://npmjs.org/)
 
 Install with:
 
