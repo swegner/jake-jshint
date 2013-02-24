@@ -34,7 +34,7 @@ then:
 
 ## Super simple to use
 
-Lint Runner is designed to be the simplest way to lint your project from a jake script.
+JsHint Runner is designed to be the simplest way to lint your project from a jake script.
 
 ```javascript
 desc("Lint the code");
@@ -58,7 +58,9 @@ task("lint", [], function() {
   if (!pass) fail("Lint failed");
 });
 ```
-For a full list of JsLint options check [here](http://www.jslint.com/lint.html#options). Here is a suggested set:
+For a full list of JsHint options check [here](http://www.jshint.com/docs/). 
+
+Here is a suggested set:
 
 ```javascript
 var options = {

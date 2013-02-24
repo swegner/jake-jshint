@@ -1,5 +1,5 @@
 {
-  "name": "Lint-Runner",
+  "name": "jshint-runner",
   "version": "0.0.1",
   "description": "The runner in this repository provides a convenient front-end to JSHint, a linter for Javascript. It should also work for JSLint.",
   "main": "lib/lint_runner.js",
