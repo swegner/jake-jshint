@@ -1,4 +1,4 @@
-[![build status](https://secure.travis-ci.org/senchalabs/connect.png)](http://travis-ci.org/senchalabs/connect)
+[![build status](https://secure.travis-ci.org/NotMyself/jshint-runner.png)](http://travis-ci.org/NotMyself/jshint-runner)
 # lint-runner
 
 Lint Runner provides a convenient front-end to [JSHint](http://www.jshint.com), a linter for Javascript. It should also work for [JSLint](http://www.jslint.com/). 
