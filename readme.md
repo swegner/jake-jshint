@@ -44,7 +44,8 @@ task("lint", [], function() {
   files.include("test/*.js");
   files.include("build/*.js");
   files.include("./*.js");
-
+  files.exclude("node_modules");
+  
   var options = {
     node: true
   };
@@ -57,7 +58,34 @@ task("lint", [], function() {
   if (!pass) fail("Lint failed");
 });
 ```
+For a full list of JsLint options check [here](http://www.jslint.com/lint.html#options). Here is a suggested set:
 
+```javascript
+var options = {
+    bitwise: true,
+    curly: false,
+    eqeqeq: true,
+    forin: true,
+    immed: true,
+    latedef: true,
+    newcap: true,
+    noarg: true,
+    noempty: true,
+    nonew: true,
+    regexp: true,
+    undef: true,
+    strict: true,
+    trailing: true,
+    node: true
+  };
+
+  var globals = {
+    describe: false,
+    it: false,
+    beforeEach: false,
+    afterEach: false
+  };
+```
 
 License
 -------
