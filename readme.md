@@ -23,6 +23,21 @@ Validates multiple files and outputs the results for each one. All files are val
 
 `fileList` is expected to be an array. This function returns `true` if *all* files are valid and `false` otherwise.
 
+### Installing with [NPM](http://npmjs.org/)
+
+Install globally with:
+
+    npm install -g jake-jshint
+
+Or you may also install it as a development dependency in a package.json file:
+
+    // package.json
+    "devDependencies": {
+      "jake-jshint": "latest"
+    }
+
+Then install it with `npm install`
+
 ## Running Tests
 
 first:
