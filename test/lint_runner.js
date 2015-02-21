@@ -63,6 +63,12 @@ describe("Source code validation", function() {
 	it("should respect globals", function() {
 		expect(lint.validateSource("a = 1;", { undef: true }, { a: true })).to.be(true);
 	});
+
+	it("should respect overrides", function() {
+		var src = "/* jshint undef: false */\n";
+		src    += "a = 1;";
+		expect(lint.validateSource(src, { undef: true })).to.be(true);
+	});
 });
 
 describe("File validation", function() {
